@@ -1,0 +1,16 @@
+Batch your request whereever possible
+get users -> accept as list
+
+
+Push Based Model :-
+* Every 5secs user updates the server with an API to tell it is alive
+
+
+Pull Based Model :-
+
+* We can't use this here because server doesn't have the context of ip address of client
+Example where we use pull is loadbalancers since it knows client details
+
+
+Only when there is a persisten connection you can speak to client continously and in this case you can use pull model instead of push
+

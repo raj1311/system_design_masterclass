@@ -1,0 +1,25 @@
+First :-
+
+
+* We tried to keep userID against bool to show online/offline
+
+Cons :-
+
+* If its offline it can't update back and our server still holds as Online
+
+
+Second :
+
+* Then we tried to keep userId to last online time -> if he is not updated back at 30secs then it is considered as offline
+
+Cons:-
+
+* Data is lot eventhough user has become inactive still entries are there for that
+
+Third :
+
+* So no entries means user is offline
+* Hold on to a db which has ttl for the heartbeat seconds
+
+
+
